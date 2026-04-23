@@ -1,0 +1,21 @@
+name: server
+description: A server-side example.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  example:
+    path: ../
+  flutter:
+    path: ../../packages/flutter
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
+
+dependency_overrides:
+  flutter:
+    path: ../../packages/flutter
