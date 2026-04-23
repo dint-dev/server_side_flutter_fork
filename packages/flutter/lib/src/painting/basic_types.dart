@@ -9,9 +9,9 @@
 /// @docImport 'text_style.dart';
 library;
 
-import 'dart:ui' show TextDirection;
+import 'package:flutter/ui.dart' show TextDirection;
 
-export 'dart:ui'
+export 'package:flutter/ui.dart'
     show
         BlendMode,
         BlurStyle,

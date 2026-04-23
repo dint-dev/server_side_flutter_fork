@@ -2,8 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'package:flutter_localizations/flutter_localizations.dart';
-///
 /// @docImport 'app_bar.dart';
 /// @docImport 'color_scheme.dart';
 /// @docImport 'dialog.dart';
@@ -13,7 +11,7 @@
 /// @docImport 'scaffold.dart';
 library;
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -102,7 +100,7 @@ enum ThemeMode {
 /// If a [Navigator] is created, at least one of these options must handle the
 /// `/` route, since it is used when an invalid [initialRoute] is specified on
 /// startup (e.g. by another application launching this one with an intent on
-/// Android; see [dart:ui.PlatformDispatcher.defaultRouteName]).
+/// Android; see [package:flutter/ui.dart.PlatformDispatcher.defaultRouteName]).
 ///
 /// This widget also configures the observer of the top-level [Navigator] (if
 /// any) to perform [Hero] animations.

@@ -5,7 +5,7 @@
 /// @docImport 'package:flutter/material.dart';
 library;
 
-import 'dart:ui' show Color, SystemColor, SystemColorPalette, lerpDouble;
+import 'package:flutter/ui.dart' show Color, SystemColor, SystemColorPalette, lerpDouble;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';

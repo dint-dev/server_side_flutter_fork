@@ -11,7 +11,7 @@ library;
 
 import 'dart:developer' as developer;
 import 'dart:math' as math;
-import 'dart:ui' as ui show FlutterView, Image;
+import 'package:flutter/ui.dart' as ui show FlutterView, Image;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/scheduler.dart';
@@ -166,7 +166,7 @@ class DecorationImage {
   ///
   /// See also:
   ///
-  ///  * [Paint.invertColors], for the dart:ui implementation.
+  ///  * [Paint.invertColors], for the package:flutter/ui.dart implementation.
   final bool invertColors;
 
   /// Whether to paint the image with anti-aliasing.

@@ -6,7 +6,7 @@
 library;
 
 import 'dart:math' show max;
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     as ui
     show
         BoxHeightStyle,
@@ -31,7 +31,7 @@ import 'text_scaler.dart';
 import 'text_span.dart';
 import 'text_style.dart';
 
-export 'dart:ui' show LineMetrics;
+export 'package:flutter/ui.dart' show LineMetrics;
 export 'package:flutter/services.dart' show TextRange, TextSelection;
 
 /// The default font size if none is specified.
@@ -97,9 +97,9 @@ class PlaceholderDimensions {
   /// See also:
   ///
   ///  * [baseline], the baseline to align to when using
-  ///    [dart:ui.PlaceholderAlignment.baseline],
-  ///    [dart:ui.PlaceholderAlignment.aboveBaseline],
-  ///    or [dart:ui.PlaceholderAlignment.belowBaseline].
+  ///    [package:flutter/ui.dart.PlaceholderAlignment.baseline],
+  ///    [package:flutter/ui.dart.PlaceholderAlignment.aboveBaseline],
+  ///    or [package:flutter/ui.dart.PlaceholderAlignment.belowBaseline].
   ///  * [baselineOffset], the distance of the alphabetic baseline from the upper
   ///    edge of the placeholder.
   final ui.PlaceholderAlignment alignment;

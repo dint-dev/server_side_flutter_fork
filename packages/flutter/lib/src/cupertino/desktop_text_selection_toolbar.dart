@@ -8,7 +8,7 @@
 /// @docImport 'desktop_text_selection_toolbar_button.dart';
 library;
 
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 
 import 'package:flutter/widgets.dart';
 

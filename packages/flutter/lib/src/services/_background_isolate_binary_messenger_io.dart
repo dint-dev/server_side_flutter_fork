@@ -4,7 +4,7 @@
 
 import 'dart:async' show Completer;
 import 'dart:isolate' show ReceivePort;
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'binary_messenger.dart';

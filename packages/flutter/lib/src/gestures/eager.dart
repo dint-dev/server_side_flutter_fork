@@ -7,7 +7,7 @@ library;
 
 import 'recognizer.dart';
 
-export 'dart:ui' show PointerDeviceKind;
+export 'package:flutter/ui.dart' show PointerDeviceKind;
 
 export 'events.dart' show PointerDownEvent, PointerEvent;
 

@@ -4,10 +4,9 @@
 
 /// @docImport 'package:flutter/cupertino.dart';
 /// @docImport 'package:flutter/material.dart';
-/// @docImport 'package:flutter_test/flutter_test.dart';
 library;
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 
@@ -17,7 +16,7 @@ import 'raw_keyboard.dart';
 import 'raw_keyboard_android.dart';
 import 'system_channels.dart';
 
-export 'dart:ui' show KeyData;
+export 'package:flutter/ui.dart' show KeyData;
 
 export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
 

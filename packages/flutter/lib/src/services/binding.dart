@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/widgets.dart';
 ///
@@ -12,11 +12,12 @@ library;
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/scheduler.dart';
 
+import '../server_side_flutter_state.dart';
 import 'asset_bundle.dart';
 import 'binary_messenger.dart';
 import 'debug.dart';
@@ -30,7 +31,7 @@ import 'system_channels.dart';
 import 'system_chrome.dart';
 import 'text_input.dart';
 
-export 'dart:ui' show ChannelBuffers, RootIsolateToken;
+export 'package:flutter/ui.dart' show ChannelBuffers, RootIsolateToken;
 
 export 'binary_messenger.dart' show BinaryMessenger;
 export 'hardware_keyboard.dart' show HardwareKeyboard, KeyEventManager;
@@ -72,7 +73,14 @@ mixin ServicesBinding on BindingBase, SchedulerBinding {
   /// be initialized before using this getter; this is typically done by calling
   /// [runApp] or [WidgetsFlutterBinding.ensureInitialized].
   static ServicesBinding get instance => BindingBase.checkInstance(_instance);
-  static ServicesBinding? _instance;
+
+  static ServicesBinding? get _instance {
+    return ServerSideFlutterState.instance.servicesBinding;
+  }
+
+  static set _instance(ServicesBinding? value) {
+    ServerSideFlutterState.instance.servicesBinding = value;
+  }
 
   /// The global singleton instance of [HardwareKeyboard], which can be used to
   /// query keyboard states.
@@ -124,7 +132,7 @@ mixin ServicesBinding on BindingBase, SchedulerBinding {
   /// plugins on the engine side to their corresponding plugin code on
   /// the framework side.
   ///
-  /// This exposes the [dart:ui.channelBuffers] object. Bindings can override
+  /// This exposes the [package:flutter/ui.dart.channelBuffers] object. Bindings can override
   /// this getter to intercept calls to the [ChannelBuffers] mechanism (for
   /// example, for tests).
   ///
@@ -282,11 +290,11 @@ mixin ServicesBinding on BindingBase, SchedulerBinding {
   // App life cycle
 
   /// Initializes the [lifecycleState] with the
-  /// [dart:ui.PlatformDispatcher.initialLifecycleState].
+  /// [package:flutter/ui.dart.PlatformDispatcher.initialLifecycleState].
   ///
   /// Once the [lifecycleState] is populated through any means (including this
   /// method), this method will do nothing. This is because the
-  /// [dart:ui.PlatformDispatcher.initialLifecycleState] may already be stale
+  /// [package:flutter/ui.dart.PlatformDispatcher.initialLifecycleState] may already be stale
   /// and it no longer makes sense to use the initial state at dart vm startup
   /// as the current state anymore.
   ///

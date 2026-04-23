@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'gesture_details.dart';
 import 'velocity_tracker.dart';
 
-export 'dart:ui' show Offset, PointerDeviceKind;
+export 'package:flutter/ui.dart' show Offset, PointerDeviceKind;
 
 export 'velocity_tracker.dart' show Velocity;
 

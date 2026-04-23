@@ -16,7 +16,7 @@ library;
 
 import 'dart:async';
 import 'dart:math' as math;
-import 'dart:ui' as ui hide TextStyle;
+import 'package:flutter/ui.dart' as ui hide TextStyle;
 
 import 'package:characters/characters.dart' show CharacterRange, StringCharacters;
 import 'package:flutter/foundation.dart';

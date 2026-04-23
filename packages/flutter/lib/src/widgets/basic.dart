@@ -2,14 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 /// @docImport 'package:flutter/cupertino.dart';
 /// @docImport 'package:flutter/material.dart';
 /// @docImport 'package:flutter/widgets.dart';
 library;
 
 import 'dart:math' as math;
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     as ui
     show Image, ImageFilter, SemanticsHitTestBehavior, SemanticsInputType, TextHeightBehavior;
 
@@ -431,14 +431,14 @@ class ShaderMask extends SingleChildRenderObjectWidget {
     super.child,
   });
 
-  /// Called to create the [dart:ui.Shader] that generates the mask.
+  /// Called to create the [package:flutter/ui.dart.Shader] that generates the mask.
   ///
   /// The shader callback is called with the current size of the child so that
   /// it can customize the shader to the size and location of the child.
   ///
   /// Typically this will use a [LinearGradient], [RadialGradient], or
-  /// [SweepGradient] to create the [dart:ui.Shader], though the
-  /// [dart:ui.ImageShader] class could also be used.
+  /// [SweepGradient] to create the [package:flutter/ui.dart.Shader], though the
+  /// [package:flutter/ui.dart.ImageShader] class could also be used.
   final ShaderCallback shaderCallback;
 
   /// The [BlendMode] to use when applying the shader to the child.
@@ -6655,13 +6655,13 @@ class RichText extends MultiChildRenderObjectWidget {
   }
 }
 
-/// A widget that displays a [dart:ui.Image] directly.
+/// A widget that displays a [package:flutter/ui.dart.Image] directly.
 ///
 /// The image is painted using [paintImage], which describes the meanings of the
 /// various fields on this class in more detail.
 ///
 /// The [image] is not disposed of by this widget. Creators of the widget are
-/// expected to call [dart:ui.Image.dispose] on the [image] once the [RawImage]
+/// expected to call [package:flutter/ui.dart.Image.dispose] on the [image] once the [RawImage]
 /// is no longer buildable.
 ///
 /// The `scale` argument specifies the linear scale factor for drawing this
@@ -6697,7 +6697,7 @@ class RawImage extends LeafRenderObjectWidget {
   /// The image to display.
   ///
   /// Since a [RawImage] is stateless, it does not ever dispose this image.
-  /// Creators of a [RawImage] are expected to call [dart:ui.Image.dispose] on
+  /// Creators of a [RawImage] are expected to call [package:flutter/ui.dart.Image.dispose] on
   /// this image handle when the [RawImage] will no longer be needed.
   final ui.Image? image;
 
@@ -6818,7 +6818,7 @@ class RawImage extends LeafRenderObjectWidget {
   ///
   /// See also:
   ///
-  ///  * [Paint.invertColors], for the dart:ui implementation.
+  ///  * [Paint.invertColors], for the package:flutter/ui.dart implementation.
   final bool invertColors;
 
   /// Whether to paint the image with anti-aliasing.

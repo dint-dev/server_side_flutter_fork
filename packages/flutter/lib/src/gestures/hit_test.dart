@@ -10,7 +10,7 @@ import 'package:vector_math/vector_math_64.dart';
 
 import 'events.dart';
 
-export 'dart:ui' show Offset;
+export 'package:flutter/ui.dart' show Offset;
 
 export 'package:vector_math/vector_math_64.dart' show Matrix4;
 

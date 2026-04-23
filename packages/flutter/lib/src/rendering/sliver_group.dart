@@ -6,7 +6,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:vector_math/vector_math_64.dart';

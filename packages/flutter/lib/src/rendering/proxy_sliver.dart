@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'dart:math';
-import 'dart:ui' as ui show Color;
+import 'package:flutter/ui.dart' as ui show Color;
 
 import 'package:flutter/animation.dart';
 import 'package:flutter/foundation.dart';

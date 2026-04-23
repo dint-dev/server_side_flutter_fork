@@ -5,7 +5,7 @@
 /// @docImport 'package:flutter/services.dart';
 library;
 
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 import 'package:flutter/foundation.dart';
 
 import 'binding.dart';

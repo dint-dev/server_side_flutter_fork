@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/rendering.dart';
 /// @docImport 'package:flutter/widgets.dart';
@@ -10,7 +10,7 @@
 /// @docImport 'pointer_signal_resolver.dart';
 library;
 
-import 'dart:ui' show Offset, PointerDeviceKind;
+import 'package:flutter/ui.dart' show Offset, PointerDeviceKind;
 
 import 'package:flutter/foundation.dart';
 import 'package:vector_math/vector_math_64.dart';
@@ -18,7 +18,7 @@ import 'package:vector_math/vector_math_64.dart';
 import 'constants.dart';
 import 'gesture_settings.dart';
 
-export 'dart:ui' show Offset, PointerDeviceKind;
+export 'package:flutter/ui.dart' show Offset, PointerDeviceKind;
 
 export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
 export 'package:vector_math/vector_math_64.dart' show Matrix4;
@@ -243,7 +243,7 @@ bool isSingleButton(int buttons) => buttons != 0 && (smallestButton(buttons) == 
 ///
 /// See also:
 ///
-///  * [dart:ui.FlutterView.devicePixelRatio], which defines the device's
+///  * [package:flutter/ui.dart.FlutterView.devicePixelRatio], which defines the device's
 ///    current resolution.
 ///  * [Listener], a widget that calls callbacks in response to common pointer
 ///    events.

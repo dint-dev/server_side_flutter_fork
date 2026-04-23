@@ -18,7 +18,7 @@ import 'pointer_router.dart';
 import 'recognizer.dart';
 import 'tap.dart';
 
-export 'dart:ui' show Offset, PointerDeviceKind;
+export 'package:flutter/ui.dart' show Offset, PointerDeviceKind;
 
 export 'events.dart' show PointerDownEvent;
 export 'tap.dart'

@@ -8,14 +8,14 @@ library;
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 
 import 'binding.dart';
 
 export 'dart:typed_data' show ByteData;
-export 'dart:ui' show ImmutableBuffer;
+export 'package:flutter/ui.dart' show ImmutableBuffer;
 
 /// A collection of resources used by the application.
 ///

@@ -12,7 +12,7 @@
 /// @docImport 'list_tile.dart';
 library;
 
-import 'dart:ui';
+import 'package:flutter/ui.dart' hide TextStyle;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';

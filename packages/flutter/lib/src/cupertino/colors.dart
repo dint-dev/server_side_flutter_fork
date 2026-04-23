@@ -8,7 +8,7 @@
 /// @docImport 'nav_bar.dart';
 library;
 
-import 'dart:ui' show Brightness, Color, ColorSpace;
+import 'package:flutter/ui.dart' show Brightness, Color, ColorSpace;
 
 import '../../foundation.dart';
 import '../widgets/basic.dart';

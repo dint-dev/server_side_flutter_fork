@@ -5,7 +5,7 @@
 /// @docImport 'package:flutter/widgets.dart';
 library;
 
-import 'dart:ui' as ui show SemanticsHitTestBehavior;
+import 'package:flutter/ui.dart' as ui show SemanticsHitTestBehavior;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';

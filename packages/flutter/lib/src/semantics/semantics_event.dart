@@ -9,7 +9,7 @@ library;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';
 
-export 'dart:ui' show TextDirection;
+export 'package:flutter/ui.dart' show TextDirection;
 
 /// Determines the assertiveness level of the accessibility announcement.
 ///

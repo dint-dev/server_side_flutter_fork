@@ -5,13 +5,13 @@
 /// @docImport 'package:flutter/material.dart';
 library;
 
-import 'dart:ui' show Color, Rect, Size;
+import 'package:flutter/ui.dart' show Color, Rect, Size;
 
 import 'package:flutter/foundation.dart';
 
 import 'animations.dart';
 
-export 'dart:ui' show Color, Rect, Size;
+export 'package:flutter/ui.dart' show Color, Rect, Size;
 
 export 'animation.dart' show Animation;
 export 'curves.dart' show Curve;

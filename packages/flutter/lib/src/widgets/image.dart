@@ -337,7 +337,7 @@ typedef ImageErrorWidgetBuilder =
 ///  * [Ink.image], which is the preferred way to show an image in a
 ///    material application (especially if the image is in a [Material] and will
 ///    have an [InkWell] on top of it).
-///  * [Image](dart-ui/Image-class.html), the class in the [dart:ui] library.
+///  * [Image](dart-ui/Image-class.html), the class in the [package:flutter/ui.dart] library.
 ///  * Cookbook: [Display images from the internet](https://docs.flutter.dev/cookbook/images/network-image)
 ///  * Cookbook: [Fade in images with a placeholder](https://docs.flutter.dev/cookbook/images/fading-in-images)
 class Image extends StatefulWidget {
@@ -721,7 +721,7 @@ class Image extends StatefulWidget {
   /// {@macro flutter.painting.imageInfo.scale}
   ///
   /// This only accepts compressed image formats (e.g. PNG). Uncompressed
-  /// formats like rawRgba (the default format of [dart:ui.Image.toByteData])
+  /// formats like rawRgba (the default format of [package:flutter/ui.dart.Image.toByteData])
   /// will lead to exceptions.
   ///
   /// Either the [width] and [height] arguments should be specified, or the

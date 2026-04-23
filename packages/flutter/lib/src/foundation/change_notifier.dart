@@ -6,7 +6,7 @@
 /// @docImport 'package:flutter/widgets.dart';
 library;
 
-import 'dart:ui' show VoidCallback;
+import 'package:flutter/ui.dart' show VoidCallback;
 
 import 'package:meta/meta.dart';
 
@@ -15,7 +15,7 @@ import 'debug.dart';
 import 'diagnostics.dart';
 import 'memory_allocations.dart';
 
-export 'dart:ui' show VoidCallback;
+export 'package:flutter/ui.dart' show VoidCallback;
 
 /// An object that maintains a list of listeners.
 ///

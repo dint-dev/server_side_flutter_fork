@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 library;
 
 import 'dart:async';
@@ -10,7 +10,7 @@ import 'dart:collection' show HashMap;
 import 'dart:convert';
 import 'dart:developer' as developer;
 import 'dart:math' as math;
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     as ui
     show
         ClipOp,
@@ -589,7 +589,7 @@ class _ScreenshotPaintingContext extends PaintingContext {
   ///  * [RenderRepaintBoundary.toImage] for a similar API for [RenderObject]s
   ///    that are repaint boundaries that can be used outside of the inspector.
   ///  * [OffsetLayer.toImage] for a similar API at the layer level.
-  ///  * [dart:ui.Scene.toImage] for more information about the image returned.
+  ///  * [package:flutter/ui.dart.Scene.toImage] for more information about the image returned.
   static Future<ui.Image> toImage(
     RenderObject renderObject,
     Rect renderBounds, {

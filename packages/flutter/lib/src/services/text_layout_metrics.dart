@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:ui' show TextRange;
+import 'package:flutter/ui.dart' show TextRange;
 
 import 'text_editing.dart';
 
-export 'dart:ui' show TextPosition, TextRange;
+export 'package:flutter/ui.dart' show TextPosition, TextRange;
 
 export 'text_editing.dart' show TextSelection;
 

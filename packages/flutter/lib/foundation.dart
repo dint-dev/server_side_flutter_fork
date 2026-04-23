@@ -7,7 +7,7 @@
 /// The features defined in this library are the lowest-level utility
 /// classes and functions used by all the other layers of the Flutter
 /// framework.
-library foundation;
+library;
 
 export 'package:meta/meta.dart'
     show
@@ -20,7 +20,6 @@ export 'package:meta/meta.dart'
         nonVirtual,
         optionalTypeArgs,
         protected,
-        required,
         visibleForOverriding,
         visibleForTesting;
 

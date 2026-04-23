@@ -15,7 +15,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -204,7 +204,7 @@ class MediaQueryData {
   ///
   /// In a typical application, calling this constructor directly is rarely
   /// needed. Consider using [MediaQueryData.fromView] to create data based on a
-  /// [dart:ui.FlutterView], or [MediaQueryData.copyWith] to create a new copy
+  /// [package:flutter/ui.dart.FlutterView], or [MediaQueryData.copyWith] to create a new copy
   /// of [MediaQueryData] with updated properties from a base [MediaQueryData].
   const MediaQueryData({
     this.size = Size.zero,
@@ -273,13 +273,13 @@ class MediaQueryData {
   /// used to construct it changes. Notifications to consider are:
   ///
   ///  * [WidgetsBindingObserver.didChangeMetrics] or
-  ///    [dart:ui.PlatformDispatcher.onMetricsChanged],
+  ///    [package:flutter/ui.dart.PlatformDispatcher.onMetricsChanged],
   ///  * [WidgetsBindingObserver.didChangeAccessibilityFeatures] or
-  ///    [dart:ui.PlatformDispatcher.onAccessibilityFeaturesChanged],
+  ///    [package:flutter/ui.dart.PlatformDispatcher.onAccessibilityFeaturesChanged],
   ///  * [WidgetsBindingObserver.didChangeTextScaleFactor] or
-  ///    [dart:ui.PlatformDispatcher.onTextScaleFactorChanged],
+  ///    [package:flutter/ui.dart.PlatformDispatcher.onTextScaleFactorChanged],
   ///  * [WidgetsBindingObserver.didChangePlatformBrightness] or
-  ///    [dart:ui.PlatformDispatcher.onPlatformBrightnessChanged].
+  ///    [package:flutter/ui.dart.PlatformDispatcher.onPlatformBrightnessChanged].
   ///
   /// The last three notifications are only relevant if no `platformData` is
   /// provided. If `platformData` is provided, callers should ensure to call
@@ -589,7 +589,7 @@ class MediaQueryData {
   ///
   /// See also:
   ///
-  ///  * [dart:ui.PlatformDispatcher.accessibilityFeatures], where the setting originates.
+  ///  * [package:flutter/ui.dart.PlatformDispatcher.accessibilityFeatures], where the setting originates.
   final bool accessibleNavigation;
 
   /// Whether the device is inverting the colors of the platform.
@@ -598,7 +598,7 @@ class MediaQueryData {
   ///
   /// See also:
   ///
-  ///  * [dart:ui.PlatformDispatcher.accessibilityFeatures], where the setting
+  ///  * [package:flutter/ui.dart.PlatformDispatcher.accessibilityFeatures], where the setting
   ///    originates.
   final bool invertColors;
 
@@ -614,7 +614,7 @@ class MediaQueryData {
   ///
   /// See also:
   ///
-  ///  * [dart:ui.PlatformDispatcher.accessibilityFeatures], where the setting
+  ///  * [package:flutter/ui.dart.PlatformDispatcher.accessibilityFeatures], where the setting
   ///    originates.
   final bool onOffSwitchLabels;
 
@@ -623,7 +623,7 @@ class MediaQueryData {
   ///
   /// See also:
   ///
-  ///  * [dart:ui.PlatformDispatcher.accessibilityFeatures], where the setting
+  ///  * [package:flutter/ui.dart.PlatformDispatcher.accessibilityFeatures], where the setting
   ///    originates.
   final bool disableAnimations;
 
@@ -632,7 +632,7 @@ class MediaQueryData {
   ///
   /// See also:
   ///
-  ///  * [dart:ui.PlatformDispatcher.accessibilityFeatures], where the setting
+  ///  * [package:flutter/ui.dart.PlatformDispatcher.accessibilityFeatures], where the setting
   ///    originates.
   final bool boldText;
 
@@ -647,7 +647,7 @@ class MediaQueryData {
   ///
   /// See also:
   ///
-  ///  * [dart:ui.PlatformDispatcher.accessibilityFeatures], where the setting
+  ///  * [package:flutter/ui.dart.PlatformDispatcher.accessibilityFeatures], where the setting
   ///    originates.
   final bool supportsAnnounce;
 
@@ -679,11 +679,11 @@ class MediaQueryData {
   ///
   /// See also:
   ///
-  ///  * [dart:ui.DisplayFeatureType], which lists the different types of
+  ///  * [package:flutter/ui.dart.DisplayFeatureType], which lists the different types of
   ///  display features and explains the differences between them.
-  ///  * [dart:ui.DisplayFeatureState], which lists the possible states for
-  ///  folding features ([dart:ui.DisplayFeatureType.fold] and
-  ///  [dart:ui.DisplayFeatureType.hinge]).
+  ///  * [package:flutter/ui.dart.DisplayFeatureState], which lists the possible states for
+  ///  folding features ([package:flutter/ui.dart.DisplayFeatureType.fold] and
+  ///  [package:flutter/ui.dart.DisplayFeatureType.hinge]).
   final List<ui.DisplayFeature> displayFeatures;
 
   /// Whether showing the system context menu is supported.

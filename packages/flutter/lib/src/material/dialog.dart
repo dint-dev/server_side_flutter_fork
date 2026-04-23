@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 /// @docImport 'package:flutter/semantics.dart';
 /// @docImport 'package:flutter/services.dart';
 ///
@@ -10,7 +10,7 @@
 /// @docImport 'text_button.dart';
 library;
 
-import 'dart:ui' show SemanticsHitTestBehavior, SemanticsRole, clampDouble, lerpDouble;
+import 'package:flutter/ui.dart' show SemanticsHitTestBehavior, SemanticsRole, clampDouble, lerpDouble;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';

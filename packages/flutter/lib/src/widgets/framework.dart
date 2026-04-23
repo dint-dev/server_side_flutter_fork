@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/animation.dart';
 /// @docImport 'package:flutter/material.dart';
 /// @docImport 'package:flutter/widgets.dart';
-/// @docImport 'package:flutter_test/flutter_test.dart';
+
 library;
 
 import 'dart:async';
@@ -30,7 +30,6 @@ export 'package:flutter/foundation.dart'
         mustCallSuper,
         optionalTypeArgs,
         protected,
-        required,
         visibleForTesting;
 export 'package:flutter/foundation.dart'
     show ErrorDescription, ErrorHint, ErrorSummary, FlutterError, debugPrint, debugPrintStack;

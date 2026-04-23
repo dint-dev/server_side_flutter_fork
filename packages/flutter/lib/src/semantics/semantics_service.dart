@@ -5,13 +5,13 @@
 /// @docImport 'package:flutter/widgets.dart';
 library;
 
-import 'dart:ui' show FlutterView, PlatformDispatcher, TextDirection;
+import 'package:flutter/ui.dart' show FlutterView, PlatformDispatcher, TextDirection;
 
 import 'package:flutter/services.dart' show SystemChannels;
 
 import 'semantics_event.dart' show AnnounceSemanticsEvent, Assertiveness, TooltipSemanticsEvent;
 
-export 'dart:ui' show TextDirection;
+export 'package:flutter/ui.dart' show TextDirection;
 
 /// Allows access to the platform's accessibility services.
 ///

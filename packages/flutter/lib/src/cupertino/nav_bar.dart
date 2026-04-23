@@ -6,7 +6,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui' show ImageFilter;
+import 'package:flutter/ui.dart' show ImageFilter;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';

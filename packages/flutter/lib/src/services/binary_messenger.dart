@@ -2,16 +2,15 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
-/// @docImport 'package:flutter_test/flutter_test.dart';
 library;
 
 import 'dart:typed_data';
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 export 'dart:typed_data' show ByteData;
-export 'dart:ui' show PlatformMessageResponseCallback;
+export 'package:flutter/ui.dart' show PlatformMessageResponseCallback;
 
 /// A function which takes a platform message and asynchronously returns an encoded response.
 typedef MessageHandler = Future<ByteData?>? Function(ByteData? message);

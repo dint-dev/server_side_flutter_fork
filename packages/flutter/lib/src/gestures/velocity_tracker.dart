@@ -8,7 +8,7 @@ import 'binding.dart';
 import 'events.dart';
 import 'lsq_solver.dart';
 
-export 'dart:ui' show Offset, PointerDeviceKind;
+export 'package:flutter/ui.dart' show Offset, PointerDeviceKind;
 
 /// A velocity in two dimensions.
 @immutable

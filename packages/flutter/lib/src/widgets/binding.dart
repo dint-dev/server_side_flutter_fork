@@ -2,10 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 /// @docImport 'package:flutter/animation.dart';
 /// @docImport 'package:flutter/material.dart';
-/// @docImport 'package:flutter_test/flutter_test.dart';
 ///
 /// @docImport 'adapter.dart';
 /// @docImport 'app_lifecycle_listener.dart';
@@ -18,7 +17,7 @@ library;
 
 import 'dart:async';
 import 'dart:developer' as developer;
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     show
         AccessibilityFeatures,
         AppExitResponse,
@@ -35,6 +34,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
+import '../server_side_flutter_state.dart';
 import '../foundation/_features.dart';
 import '_accessibility_evaluations.dart';
 import '_window.dart';
@@ -48,7 +48,7 @@ import 'service_extensions.dart';
 import 'view.dart';
 import 'widget_inspector.dart';
 
-export 'dart:ui' show AppLifecycleState, Locale;
+export 'package:flutter/ui.dart' show AppLifecycleState, Locale;
 
 // Examples can assume:
 // late FlutterView myFlutterView;
@@ -215,7 +215,7 @@ abstract mixin class WidgetsBindingObserver {
   /// when a phone is rotated.
   ///
   /// This method exposes notifications from
-  /// [dart:ui.PlatformDispatcher.onMetricsChanged].
+  /// [package:flutter/ui.dart.PlatformDispatcher.onMetricsChanged].
   ///
   /// {@tool snippet}
   ///
@@ -284,7 +284,7 @@ abstract mixin class WidgetsBindingObserver {
   /// application.
   ///
   /// This method exposes notifications from
-  /// [dart:ui.PlatformDispatcher.onTextScaleFactorChanged].
+  /// [package:flutter/ui.dart.PlatformDispatcher.onTextScaleFactorChanged].
   ///
   /// {@tool snippet}
   ///
@@ -338,7 +338,7 @@ abstract mixin class WidgetsBindingObserver {
   /// Called when the platform brightness changes.
   ///
   /// This method exposes notifications from
-  /// [dart:ui.PlatformDispatcher.onPlatformBrightnessChanged].
+  /// [package:flutter/ui.dart.PlatformDispatcher.onPlatformBrightnessChanged].
   ///
   /// See also:
   ///
@@ -351,7 +351,7 @@ abstract mixin class WidgetsBindingObserver {
   /// settings.
   ///
   /// This method exposes notifications from
-  /// [dart:ui.PlatformDispatcher.onLocaleChanged].
+  /// [package:flutter/ui.dart.PlatformDispatcher.onLocaleChanged].
   void didChangeLocales(List<Locale>? locales) {}
 
   /// Called when the system puts the app in the background or returns
@@ -405,7 +405,7 @@ abstract mixin class WidgetsBindingObserver {
   /// features.
   ///
   /// This method exposes notifications from
-  /// [dart:ui.PlatformDispatcher.onAccessibilityFeaturesChanged].
+  /// [package:flutter/ui.dart.PlatformDispatcher.onAccessibilityFeaturesChanged].
   void didChangeAccessibilityFeatures() {}
 }
 
@@ -493,7 +493,14 @@ mixin WidgetsBinding
   /// be initialized before using this getter; this is typically done by calling
   /// [runApp] or [WidgetsFlutterBinding.ensureInitialized].
   static WidgetsBinding get instance => BindingBase.checkInstance(_instance);
-  static WidgetsBinding? _instance;
+
+  static WidgetsBinding? get _instance {
+    return ServerSideFlutterState.instance.widgetsBinding;
+  }
+
+  static set _instance(WidgetsBinding? value) {
+    ServerSideFlutterState.instance.widgetsBinding = value;
+  }
 
   /// If true, forces the widget inspector to be visible.
   ///
@@ -1006,7 +1013,7 @@ mixin WidgetsBinding
   ///
   /// Calls [dispatchLocalesChanged] to notify the binding observers.
   ///
-  /// See [dart:ui.PlatformDispatcher.onLocaleChanged].
+  /// See [package:flutter/ui.dart.PlatformDispatcher.onLocaleChanged].
   @protected
   @mustCallSuper
   @visibleForTesting

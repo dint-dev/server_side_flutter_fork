@@ -5,11 +5,11 @@
 /// @docImport 'package:flutter/widgets.dart';
 library;
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 
-export 'dart:ui' show FlutterView;
+export 'package:flutter/ui.dart' show FlutterView;
 
 /// The device specific gesture settings scaled into logical pixels.
 ///

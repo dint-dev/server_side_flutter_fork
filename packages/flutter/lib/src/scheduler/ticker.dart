@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 /// @docImport 'package:flutter/widgets.dart';
-/// @docImport 'package:flutter_test/flutter_test.dart';
 library;
 
 import 'dart:async';
@@ -12,7 +11,7 @@ import 'package:flutter/foundation.dart';
 
 import 'binding.dart';
 
-export 'dart:ui' show VoidCallback;
+export 'package:flutter/ui.dart' show VoidCallback;
 
 export 'package:flutter/foundation.dart' show DiagnosticsNode;
 

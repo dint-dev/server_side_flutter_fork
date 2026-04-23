@@ -6,7 +6,7 @@
 /// @docImport 'tab_view.dart';
 library;
 
-import 'dart:ui' show ImageFilter;
+import 'package:flutter/ui.dart' show ImageFilter;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';

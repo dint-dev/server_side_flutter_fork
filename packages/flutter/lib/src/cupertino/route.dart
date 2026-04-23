@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/material.dart';
 /// @docImport 'package:flutter/services.dart';
@@ -16,7 +16,7 @@
 library;
 
 import 'dart:math';
-import 'dart:ui' show ImageFilter;
+import 'package:flutter/ui.dart' show ImageFilter;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';

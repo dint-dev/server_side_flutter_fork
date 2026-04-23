@@ -8,7 +8,7 @@
 library;
 
 import 'dart:collection';
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     show FlutterView, SemanticsUpdate, ViewFocusDirection, ViewFocusEvent, ViewFocusState;
 
 import 'package:flutter/foundation.dart';

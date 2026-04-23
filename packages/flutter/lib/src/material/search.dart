@@ -8,7 +8,7 @@
 /// @docImport 'list_tile.dart';
 library;
 
-import 'dart:ui';
+import 'package:flutter/ui.dart' hide TextStyle;
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';

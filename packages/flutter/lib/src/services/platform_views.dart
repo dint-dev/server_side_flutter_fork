@@ -8,7 +8,7 @@
 library;
 
 import 'dart:async';
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -16,7 +16,7 @@ import 'package:flutter/gestures.dart';
 import 'message_codec.dart';
 import 'system_channels.dart';
 
-export 'dart:ui' show Offset, Size, TextDirection, VoidCallback;
+export 'package:flutter/ui.dart' show Offset, Size, TextDirection, VoidCallback;
 
 export 'package:flutter/gestures.dart' show PointerEvent;
 

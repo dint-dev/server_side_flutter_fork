@@ -64,7 +64,7 @@ class PartialStackFrame {
   );
 
   /// The package to match, e.g. `package:flutter/src/foundation/assertions.dart`,
-  /// or `dart:ui/window.dart`.
+  /// or `package:flutter/ui.dart/window.dart`.
   final Pattern package;
 
   /// The class name for the method.

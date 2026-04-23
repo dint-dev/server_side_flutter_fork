@@ -3,9 +3,8 @@
 // found in the LICENSE file.
 
 /// @docImport 'dart:developer';
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
-/// @docImport 'package:flutter_test/flutter_test.dart';
 ///
 /// @docImport 'borders.dart';
 /// @docImport 'box_decoration.dart';
@@ -16,7 +15,7 @@
 library;
 
 import 'dart:io';
-import 'dart:ui' show Image, Picture, Size, TextDirection;
+import 'package:flutter/ui.dart' show Image, Picture, Size, TextDirection;
 
 import 'package:flutter/foundation.dart';
 
@@ -62,11 +61,11 @@ HttpClientProvider? debugNetworkImageHttpClientProvider;
 /// See: [debugOnPaintImage].
 typedef PaintImageCallback = void Function(ImageSizeInfo info);
 
-/// Tracks the bytes used by a [dart:ui.Image] compared to the bytes needed to
+/// Tracks the bytes used by a [package:flutter/ui.dart.Image] compared to the bytes needed to
 /// paint that image without scaling it.
 @immutable
 class ImageSizeInfo {
-  /// Creates an object to track the backing size of a [dart:ui.Image] compared
+  /// Creates an object to track the backing size of a [package:flutter/ui.dart.Image] compared
   /// to its display size on a [Canvas].
   ///
   /// This class is used by the framework when it paints an image to a canvas

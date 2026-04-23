@@ -7,15 +7,16 @@
 /// @docImport 'semantics.dart';
 library;
 
-import 'dart:ui' as ui show AccessibilityFeatures, SemanticsActionEvent, SemanticsUpdateBuilder;
+import 'package:flutter/ui.dart' as ui show AccessibilityFeatures, SemanticsActionEvent, SemanticsUpdateBuilder;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
+import '../server_side_flutter_state.dart';
 import 'debug.dart';
 
-export 'dart:ui' show AccessibilityFeatures, SemanticsActionEvent, SemanticsUpdateBuilder;
+export 'package:flutter/ui.dart' show AccessibilityFeatures, SemanticsActionEvent, SemanticsUpdateBuilder;
 
 /// The glue between the semantics layer and the Flutter engine.
 mixin SemanticsBinding on BindingBase {
@@ -52,7 +53,14 @@ mixin SemanticsBinding on BindingBase {
   /// be initialized before using this getter; this is typically done by calling
   /// [runApp] or [WidgetsFlutterBinding.ensureInitialized].
   static SemanticsBinding get instance => BindingBase.checkInstance(_instance);
-  static SemanticsBinding? _instance;
+
+  static SemanticsBinding? get _instance {
+    return ServerSideFlutterState.instance.semanticsBinding;
+  }
+
+  static set _instance(SemanticsBinding? value) {
+    ServerSideFlutterState.instance.semanticsBinding = value;
+  }
 
   /// Whether semantics information must be collected.
   ///
@@ -184,7 +192,7 @@ mixin SemanticsBinding on BindingBase {
   /// perform the given `action` on the [SemanticsNode] specified by
   /// [ui.SemanticsActionEvent.nodeId].
   ///
-  /// See [dart:ui.PlatformDispatcher.onSemanticsActionEvent].
+  /// See [package:flutter/ui.dart.PlatformDispatcher.onSemanticsActionEvent].
   @protected
   void performSemanticsAction(ui.SemanticsActionEvent action);
 
@@ -201,7 +209,7 @@ mixin SemanticsBinding on BindingBase {
 
   /// Called when the platform accessibility features change.
   ///
-  /// See [dart:ui.PlatformDispatcher.onAccessibilityFeaturesChanged].
+  /// See [package:flutter/ui.dart.PlatformDispatcher.onAccessibilityFeaturesChanged].
   @protected
   @mustCallSuper
   void handleAccessibilityFeaturesChanged() {

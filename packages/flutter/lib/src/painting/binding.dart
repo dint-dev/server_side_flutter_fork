@@ -2,16 +2,16 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/widgets.dart';
-/// @docImport 'package:flutter_driver/driver_extension.dart';
 library;
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show ServicesBinding;
 
+import '../server_side_flutter_state.dart';
 import 'image_cache.dart';
 import 'shader_warm_up.dart';
 
@@ -35,7 +35,14 @@ mixin PaintingBinding on BindingBase, ServicesBinding {
   /// be initialized before using this getter; this is typically done by calling
   /// [runApp] or [WidgetsFlutterBinding.ensureInitialized].
   static PaintingBinding get instance => BindingBase.checkInstance(_instance);
-  static PaintingBinding? _instance;
+
+  static PaintingBinding? get _instance {
+    return ServerSideFlutterState.instance.paintingBinding;
+  }
+
+  static set _instance(PaintingBinding? value) {
+    ServerSideFlutterState.instance.paintingBinding = value;
+  }
 
   /// [ShaderWarmUp] instance to be executed during [initInstances].
   ///
@@ -84,7 +91,7 @@ mixin PaintingBinding on BindingBase, ServicesBinding {
   @protected
   ImageCache createImageCache() => ImageCache();
 
-  /// Calls through to [dart:ui.instantiateImageCodecFromBuffer] from [ImageCache].
+  /// Calls through to [package:flutter/ui.dart.instantiateImageCodecFromBuffer] from [ImageCache].
   ///
   /// The [buffer] parameter should be an [ui.ImmutableBuffer] instance which can
   /// be acquired from [ui.ImmutableBuffer.fromUint8List] or [ui.ImmutableBuffer.fromAsset].
@@ -125,7 +132,7 @@ mixin PaintingBinding on BindingBase, ServicesBinding {
     );
   }
 
-  /// Calls through to [dart:ui.instantiateImageCodecWithSize] from [ImageCache].
+  /// Calls through to [package:flutter/ui.dart.instantiateImageCodecWithSize] from [ImageCache].
   ///
   /// The [buffer] parameter should be an [ui.ImmutableBuffer] instance which can
   /// be acquired from [ui.ImmutableBuffer.fromUint8List] or

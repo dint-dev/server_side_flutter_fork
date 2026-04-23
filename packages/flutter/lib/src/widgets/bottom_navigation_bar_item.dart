@@ -11,7 +11,7 @@
 /// @docImport 'text.dart';
 library;
 
-import 'dart:ui' show Color;
+import 'package:flutter/ui.dart' show Color;
 
 import 'framework.dart';
 

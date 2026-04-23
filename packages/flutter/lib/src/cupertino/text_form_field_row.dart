@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:ui' as ui show BoxHeightStyle, BoxWidthStyle;
+import 'package:flutter/ui.dart' as ui show BoxHeightStyle, BoxWidthStyle;
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';

@@ -6,7 +6,7 @@
 /// @docImport 'text.dart';
 library;
 
-import 'dart:ui' as ui show ParagraphBuilder, PlaceholderAlignment;
+import 'package:flutter/ui.dart' as ui show ParagraphBuilder, PlaceholderAlignment;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';

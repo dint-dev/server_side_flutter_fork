@@ -2,7 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'package:fake_async/fake_async.dart';
 /// @docImport 'package:flutter/rendering.dart';
 /// @docImport 'package:flutter/widgets.dart';
 ///
@@ -11,11 +10,12 @@ library;
 
 import 'dart:async';
 import 'dart:collection';
-import 'dart:ui' as ui show HitTestRequest, HitTestResponse, PointerDataPacket;
+import 'package:flutter/ui.dart' as ui show HitTestRequest, HitTestResponse, PointerDataPacket;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/scheduler.dart';
 
+import '../server_side_flutter_state.dart';
 import 'arena.dart';
 import 'converter.dart';
 import 'debug.dart';
@@ -25,7 +25,7 @@ import 'pointer_router.dart';
 import 'pointer_signal_resolver.dart';
 import 'resampler.dart';
 
-export 'dart:ui' show Offset;
+export 'package:flutter/ui.dart' show Offset;
 
 export 'package:flutter/foundation.dart' show DiagnosticsNode, InformationCollector;
 
@@ -238,7 +238,7 @@ const Duration _samplingInterval = Duration(microseconds: 16667);
 /// ### [PointerDownEvent]
 ///
 /// When a [PointerDownEvent] is received by the [GestureBinding] (from
-/// [dart:ui.PlatformDispatcher.onPointerDataPacket], as interpreted by the
+/// [package:flutter/ui.dart.PlatformDispatcher.onPointerDataPacket], as interpreted by the
 /// [PointerEventConverter]), a [hitTest] is performed to determine which
 /// [HitTestTarget] nodes are affected. (Other bindings are expected to
 /// implement [hitTest] to defer to [HitTestable] objects. For example, the
@@ -289,7 +289,14 @@ mixin GestureBinding on BindingBase implements HitTestable, HitTestDispatcher, H
   /// be initialized before using this getter; this is typically done by calling
   /// [runApp] or [WidgetsFlutterBinding.ensureInitialized].
   static GestureBinding get instance => BindingBase.checkInstance(_instance);
-  static GestureBinding? _instance;
+
+  static GestureBinding? get _instance {
+    return ServerSideFlutterState.instance.gestureBinding;
+  }
+
+  static set _instance(GestureBinding? value) {
+    ServerSideFlutterState.instance.gestureBinding = value;
+  }
 
   @override
   void unlocked() {

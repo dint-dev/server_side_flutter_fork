@@ -9,7 +9,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui' show DisplayFeature, DisplayFeatureState;
+import 'package:flutter/ui.dart' show DisplayFeature, DisplayFeatureState;
 
 import 'basic.dart';
 import 'debug.dart';

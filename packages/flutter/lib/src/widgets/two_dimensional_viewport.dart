@@ -1803,8 +1803,7 @@ abstract class RenderTwoDimensionalViewport extends RenderBox implements RenderA
 
   @override
   void applyPaintTransform(RenderBox child, Matrix4 transform) {
-    final Offset paintOffset = parentDataOf(child).paintOffset!;
-    transform.translate(paintOffset.dx, paintOffset.dy);
+    throw UnimplementedError();
   }
 
   @override

@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/widgets.dart';
 ///
@@ -10,7 +10,7 @@
 library;
 
 import 'dart:async';
-import 'dart:ui' as ui show PictureRecorder, SceneBuilder, SemanticsUpdate;
+import 'package:flutter/ui.dart' as ui show PictureRecorder, SceneBuilder, SemanticsUpdate;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -18,6 +18,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter/services.dart';
 
+import '../server_side_flutter_state.dart';
 import 'debug.dart';
 import 'mouse_tracker.dart';
 import 'object.dart';
@@ -72,7 +73,14 @@ mixin RendererBinding
   /// be initialized before using this getter; this is typically done by calling
   /// [runApp] or [WidgetsFlutterBinding.ensureInitialized].
   static RendererBinding get instance => BindingBase.checkInstance(_instance);
-  static RendererBinding? _instance;
+
+  static RendererBinding? get _instance {
+    return ServerSideFlutterState.instance.rendererBinding;
+  }
+
+  static set _instance(RendererBinding? value) {
+    ServerSideFlutterState.instance.rendererBinding = value;
+  }
 
   @override
   void initServiceExtensions() {
@@ -398,7 +406,7 @@ mixin RendererBinding
 
   /// Called when the system metrics change.
   ///
-  /// See [dart:ui.PlatformDispatcher.onMetricsChanged].
+  /// See [package:flutter/ui.dart.PlatformDispatcher.onMetricsChanged].
   @protected
   @visibleForTesting
   void handleMetricsChanged() {
@@ -414,7 +422,7 @@ mixin RendererBinding
 
   /// Called when the platform text scale factor changes.
   ///
-  /// See [dart:ui.PlatformDispatcher.onTextScaleFactorChanged].
+  /// See [package:flutter/ui.dart.PlatformDispatcher.onTextScaleFactorChanged].
   @protected
   void handleTextScaleFactorChanged() {}
 
@@ -441,7 +449,7 @@ mixin RendererBinding
   /// ```
   /// {@end-tool}
   ///
-  /// See [dart:ui.PlatformDispatcher.onPlatformBrightnessChanged].
+  /// See [package:flutter/ui.dart.PlatformDispatcher.onPlatformBrightnessChanged].
   @protected
   void handlePlatformBrightnessChanged() {}
 
@@ -604,7 +612,7 @@ mixin RendererBinding
   /// completed this frame.
   ///
   /// After [handleBeginFrame], [handleDrawFrame], which is registered with
-  /// [dart:ui.PlatformDispatcher.onDrawFrame], is called, which invokes all the
+  /// [package:flutter/ui.dart.PlatformDispatcher.onDrawFrame], is called, which invokes all the
   /// persistent frame callbacks, of which the most notable is this method,
   /// [drawFrame], which proceeds as follows:
   ///
@@ -640,16 +648,7 @@ mixin RendererBinding
   // When editing the above, also update widgets/binding.dart's copy.
   @protected
   void drawFrame() {
-    rootPipelineOwner.flushLayout();
-    rootPipelineOwner.flushCompositingBits();
-    rootPipelineOwner.flushPaint();
-    if (sendFramesToEngine) {
-      for (final RenderView renderView in renderViews) {
-        renderView.compositeFrame(); // this sends the bits to the GPU
-      }
-      rootPipelineOwner.flushSemantics(); // this sends the semantics to the OS.
-      _firstFrameSent = true;
-    }
+    // IMPORTANT: Removed in this fork.
   }
 
   @override

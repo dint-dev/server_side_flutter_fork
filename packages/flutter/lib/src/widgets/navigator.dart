@@ -17,7 +17,7 @@ import 'dart:async';
 import 'dart:collection';
 import 'dart:convert';
 import 'dart:developer' as developer;
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
@@ -1740,7 +1740,7 @@ class Navigator extends StatefulWidget {
   ///
   /// See also:
   ///
-  ///  * [dart:ui.PlatformDispatcher.defaultRouteName], which reflects the route that the
+  ///  * [package:flutter/ui.dart.PlatformDispatcher.defaultRouteName], which reflects the route that the
   ///    application was started with.
   static const String defaultRouteName = '/';
 

@@ -9,7 +9,7 @@
 /// @docImport 'icon_theme.dart';
 library;
 
-import 'dart:ui' as ui show lerpDouble;
+import 'package:flutter/ui.dart' as ui show lerpDouble;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';

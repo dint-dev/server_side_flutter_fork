@@ -5,7 +5,7 @@
 /// @docImport 'package:flutter/widgets.dart';
 library;
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 

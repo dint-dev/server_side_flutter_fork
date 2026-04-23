@@ -18,7 +18,7 @@ library;
 import 'dart:async';
 import 'dart:collection';
 import 'dart:math' as math;
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior, HitTestEntry, HitTestResult;

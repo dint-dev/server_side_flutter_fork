@@ -5,7 +5,7 @@
 /// @docImport 'binding.dart';
 library;
 
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';

@@ -184,7 +184,7 @@ const double _kLowDprLimit = 2.0;
 ///   @override
 ///   Widget build(BuildContext context) {
 ///     return RawImage(
-///       image: _imageInfo?.image, // this is a dart:ui Image object
+///       image: _imageInfo?.image, // this is a package:flutter/ui.dart Image object
 ///       scale: _imageInfo?.scale ?? 1.0,
 ///     );
 ///   }

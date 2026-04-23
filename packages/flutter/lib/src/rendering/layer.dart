@@ -12,7 +12,7 @@
 /// @docImport 'view.dart';
 library;
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -1532,7 +1532,7 @@ class OffsetLayer extends ContainerLayer {
   ///
   /// The [pixelRatio] describes the scale between the logical pixels and the
   /// size of the output image. It is independent of the
-  /// [dart:ui.FlutterView.devicePixelRatio] for the device, so specifying 1.0
+  /// [package:flutter/ui.dart.FlutterView.devicePixelRatio] for the device, so specifying 1.0
   /// (the default) will give you a 1:1 mapping between logical pixels and the
   /// output pixels in the image.
   ///
@@ -1542,7 +1542,7 @@ class OffsetLayer extends ContainerLayer {
   /// See also:
   ///
   ///  * [RenderRepaintBoundary.toImage] for a similar API at the render object level.
-  ///  * [dart:ui.Scene.toImage] for more information about the image returned.
+  ///  * [package:flutter/ui.dart.Scene.toImage] for more information about the image returned.
   Future<ui.Image> toImage(Rect bounds, {double pixelRatio = 1.0}) async {
     final ui.Scene scene = _createSceneForImage(bounds, pixelRatio: pixelRatio);
 
@@ -1566,7 +1566,7 @@ class OffsetLayer extends ContainerLayer {
   ///
   /// The [pixelRatio] describes the scale between the logical pixels and the
   /// size of the output image. It is independent of the
-  /// [dart:ui.FlutterView.devicePixelRatio] for the device, so specifying 1.0
+  /// [package:flutter/ui.dart.FlutterView.devicePixelRatio] for the device, so specifying 1.0
   /// (the default) will give you a 1:1 mapping between logical pixels and the
   /// output pixels in the image.
   ///
@@ -1576,7 +1576,7 @@ class OffsetLayer extends ContainerLayer {
   /// See also:
   ///
   ///  * [RenderRepaintBoundary.toImage] for a similar API at the render object level.
-  ///  * [dart:ui.Scene.toImage] for more information about the image returned.
+  ///  * [package:flutter/ui.dart.Scene.toImage] for more information about the image returned.
   ui.Image toImageSync(Rect bounds, {double pixelRatio = 1.0}) {
     final ui.Scene scene = _createSceneForImage(bounds, pixelRatio: pixelRatio);
 

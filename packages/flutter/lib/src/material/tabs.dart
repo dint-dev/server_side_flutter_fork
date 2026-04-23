@@ -6,7 +6,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui' show SemanticsRole, lerpDouble;
+import 'package:flutter/ui.dart' show SemanticsRole, lerpDouble;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;

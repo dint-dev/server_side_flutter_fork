@@ -6,7 +6,7 @@
 /// @docImport 'search_bar_theme.dart';
 library;
 
-import 'dart:ui' show lerpDouble;
+import 'package:flutter/ui.dart' show lerpDouble;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';

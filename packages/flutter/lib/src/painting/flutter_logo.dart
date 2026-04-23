@@ -6,7 +6,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui' as ui show Gradient, TextBox, lerpDouble;
+import 'package:flutter/ui.dart' as ui show Gradient, TextBox, lerpDouble;
 
 import 'package:flutter/foundation.dart';
 

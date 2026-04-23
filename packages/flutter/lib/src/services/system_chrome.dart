@@ -7,19 +7,19 @@
 library;
 
 import 'dart:async';
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 
 import 'package:flutter/foundation.dart';
 
 import 'binding.dart';
 import 'system_channels.dart';
 
-export 'dart:ui' show Brightness, Color;
+export 'package:flutter/ui.dart' show Brightness, Color;
 
 export 'binding.dart' show SystemUiChangeCallback;
 
 // Examples can assume:
-// import 'dart:ui' as ui;
+// import 'package:flutter/ui.dart' as ui;
 // import 'package:flutter/services.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter/widgets.dart';

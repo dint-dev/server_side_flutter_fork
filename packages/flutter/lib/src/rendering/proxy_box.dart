@@ -8,7 +8,7 @@
 /// @docImport 'sliver.dart';
 library;
 
-import 'dart:ui' as ui show Color, Gradient, Image, ImageFilter;
+import 'package:flutter/ui.dart' as ui show Color, Gradient, Image, ImageFilter;
 
 import 'package:flutter/animation.dart';
 import 'package:flutter/foundation.dart';
@@ -3501,7 +3501,7 @@ class RenderRepaintBoundary extends RenderProxyBox {
   ///
   /// The [pixelRatio] describes the scale between the logical pixels and the
   /// size of the output image. It is independent of the
-  /// [dart:ui.FlutterView.devicePixelRatio] for the device, so specifying 1.0
+  /// [package:flutter/ui.dart.FlutterView.devicePixelRatio] for the device, so specifying 1.0
   /// (the default) will give you a 1:1 mapping between logical pixels and the
   /// output pixels in the image.
   ///
@@ -3548,7 +3548,7 @@ class RenderRepaintBoundary extends RenderProxyBox {
   /// See also:
   ///
   ///  * [OffsetLayer.toImage] for a similar API at the layer level.
-  ///  * [dart:ui.Scene.toImage] for more information about the image returned.
+  ///  * [package:flutter/ui.dart.Scene.toImage] for more information about the image returned.
   Future<ui.Image> toImage({double pixelRatio = 1.0}) {
     assert(!debugNeedsPaint);
     final offsetLayer = layer! as OffsetLayer;
@@ -3566,7 +3566,7 @@ class RenderRepaintBoundary extends RenderProxyBox {
   ///
   /// The [pixelRatio] describes the scale between the logical pixels and the
   /// size of the output image. It is independent of the
-  /// [dart:ui.FlutterView.devicePixelRatio] for the device, so specifying 1.0
+  /// [package:flutter/ui.dart.FlutterView.devicePixelRatio] for the device, so specifying 1.0
   /// (the default) will give you a 1:1 mapping between logical pixels and the
   /// output pixels in the image.
   ///
@@ -3614,7 +3614,7 @@ class RenderRepaintBoundary extends RenderProxyBox {
   /// See also:
   ///
   ///  * [OffsetLayer.toImageSync] for a similar API at the layer level.
-  ///  * [dart:ui.Scene.toImageSync] for more information about the image returned.
+  ///  * [package:flutter/ui.dart.Scene.toImageSync] for more information about the image returned.
   ui.Image toImageSync({double pixelRatio = 1.0}) {
     assert(!debugNeedsPaint);
     final offsetLayer = layer! as OffsetLayer;

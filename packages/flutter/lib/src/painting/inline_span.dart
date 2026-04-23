@@ -2,14 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/material.dart';
 ///
 /// @docImport 'placeholder_span.dart';
 library;
 
-import 'dart:ui' as ui show ParagraphBuilder, StringAttribute;
+import 'package:flutter/ui.dart' as ui show ParagraphBuilder, StringAttribute;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';

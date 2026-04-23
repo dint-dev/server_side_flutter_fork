@@ -22,7 +22,7 @@
 /// @docImport 'text_input.dart';
 library;
 
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 
 import 'message_codecs.dart';
 import 'platform_channel.dart';

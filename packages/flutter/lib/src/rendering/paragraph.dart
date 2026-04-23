@@ -8,7 +8,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     as ui
     show
         BoxHeightStyle,
@@ -850,7 +850,7 @@ class RenderParagraph extends RenderBox
   bool _needsClipping = false;
   ui.Shader? _overflowShader;
 
-  /// Whether this paragraph currently has a [dart:ui.Shader] for its overflow
+  /// Whether this paragraph currently has a [package:flutter/ui.dart.Shader] for its overflow
   /// effect.
   ///
   /// Used to test this object. Not for use in production.

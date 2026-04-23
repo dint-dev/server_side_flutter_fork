@@ -122,7 +122,7 @@ class FittedSizes {
 ///
 /// {@tool snippet}
 ///
-/// This function paints a [dart:ui.Image] `image` onto the [Rect] `outputRect` on a
+/// This function paints a [package:flutter/ui.dart.Image] `image` onto the [Rect] `outputRect` on a
 /// [Canvas] `canvas`, using a [Paint] `paint`, applying the [BoxFit] algorithm
 /// `fit`:
 ///

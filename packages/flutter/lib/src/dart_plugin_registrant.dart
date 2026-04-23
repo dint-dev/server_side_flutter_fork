@@ -6,5 +6,4 @@
 /// execute the Dart Plugin Registrant when the Isolate is started or
 /// DartPluginRegistrant.ensureInitialized() is called from a background
 /// Isolate.
-@pragma('vm:entry-point')
 const String dartPluginRegistrantLibrary = String.fromEnvironment('flutter.dart_plugin_registrant');

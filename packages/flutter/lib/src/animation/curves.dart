@@ -6,12 +6,12 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui';
+import 'package:flutter/ui.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
-export 'dart:ui' show Offset;
+export 'package:flutter/ui.dart' show Offset;
 
 /// An abstract class providing an interface for evaluating a parametric curve.
 ///

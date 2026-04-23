@@ -13,7 +13,7 @@ library;
 import 'dart:async';
 import 'dart:collection';
 import 'dart:developer' show Flow, Timeline, TimelineTask;
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     show
         AppLifecycleState,
         DartPerformanceMode,
@@ -25,11 +25,12 @@ import 'dart:ui'
 import 'package:collection/collection.dart' show HeapPriorityQueue, PriorityQueue;
 import 'package:flutter/foundation.dart';
 
+import '../server_side_flutter_state.dart';
 import 'debug.dart';
 import 'priority.dart';
 import 'service_extensions.dart';
 
-export 'dart:ui' show AppLifecycleState, FrameTiming, TimingsCallback;
+export 'package:flutter/ui.dart' show AppLifecycleState, FrameTiming, TimingsCallback;
 
 export 'priority.dart' show Priority;
 
@@ -232,17 +233,17 @@ class PerformanceModeRequestHandle {
 /// Scheduler for running the following:
 ///
 /// * _Transient callbacks_, triggered by the system's
-///   [dart:ui.PlatformDispatcher.onBeginFrame] callback, for synchronizing the
+///   [package:flutter/ui.dart.PlatformDispatcher.onBeginFrame] callback, for synchronizing the
 ///   application's behavior to the system's display. For example, [Ticker]s and
 ///   [AnimationController]s trigger from these.
 ///
 /// * _Persistent callbacks_, triggered by the system's
-///   [dart:ui.PlatformDispatcher.onDrawFrame] callback, for updating the
+///   [package:flutter/ui.dart.PlatformDispatcher.onDrawFrame] callback, for updating the
 ///   system's display after transient callbacks have executed. For example, the
 ///   rendering layer uses this to drive its rendering pipeline.
 ///
 /// * _Post-frame callbacks_, which are run after persistent callbacks, just
-///   before returning from the [dart:ui.PlatformDispatcher.onDrawFrame] callback.
+///   before returning from the [package:flutter/ui.dart.PlatformDispatcher.onDrawFrame] callback.
 ///
 /// * Non-rendering tasks, to be run between frames. These are given a
 ///   priority and are executed in priority order according to a
@@ -266,7 +267,14 @@ mixin SchedulerBinding on BindingBase {
   /// be initialized before using this getter; this is typically done by calling
   /// [runApp] or [WidgetsFlutterBinding.ensureInitialized].
   static SchedulerBinding get instance => BindingBase.checkInstance(_instance);
-  static SchedulerBinding? _instance;
+
+  static SchedulerBinding? get _instance {
+    return ServerSideFlutterState.instance.schedulerBinding;
+  }
+
+  static set _instance(SchedulerBinding? value) {
+    ServerSideFlutterState.instance.schedulerBinding = value;
+  }
 
   final List<TimingsCallback> _timingsCallbacks = <TimingsCallback>[];
 
@@ -294,16 +302,16 @@ mixin SchedulerBinding on BindingBase {
   /// feel more sluggish.
   ///
   /// Using [addTimingsCallback] is preferred over using
-  /// [dart:ui.PlatformDispatcher.onReportTimings] directly because the
-  /// [dart:ui.PlatformDispatcher.onReportTimings] API only allows one callback,
+  /// [package:flutter/ui.dart.PlatformDispatcher.onReportTimings] directly because the
+  /// [package:flutter/ui.dart.PlatformDispatcher.onReportTimings] API only allows one callback,
   /// which prevents multiple libraries from registering listeners
   /// simultaneously, while this API allows multiple callbacks to be registered
   /// independently.
   ///
   /// This API is implemented in terms of
-  /// [dart:ui.PlatformDispatcher.onReportTimings]. In release builds, when no
+  /// [package:flutter/ui.dart.PlatformDispatcher.onReportTimings]. In release builds, when no
   /// libraries have registered with this API, the
-  /// [dart:ui.PlatformDispatcher.onReportTimings] callback is not set, which
+  /// [package:flutter/ui.dart.PlatformDispatcher.onReportTimings] callback is not set, which
   /// disables the performance tracking and reduces the runtime overhead to
   /// approximately zero. The performance overhead of the performance tracking
   /// when one or more callbacks are registered (i.e. when it is enabled) is
@@ -917,7 +925,7 @@ mixin SchedulerBinding on BindingBase {
   }
 
   /// If necessary, schedules a new frame by calling
-  /// [dart:ui.PlatformDispatcher.scheduleFrame].
+  /// [package:flutter/ui.dart.PlatformDispatcher.scheduleFrame].
   ///
   /// After this is called, the engine will (eventually) call
   /// [handleBeginFrame]. (This call might be delayed, e.g. if the device's
@@ -959,7 +967,7 @@ mixin SchedulerBinding on BindingBase {
   }
 
   /// Schedules a new frame by calling
-  /// [dart:ui.PlatformDispatcher.scheduleFrame].
+  /// [package:flutter/ui.dart.PlatformDispatcher.scheduleFrame].
   ///
   /// After this is called, the engine will call [handleBeginFrame], even if
   /// frames would normally not be scheduled by [scheduleFrame] (e.g. even if
@@ -1137,7 +1145,7 @@ mixin SchedulerBinding on BindingBase {
   Duration? _currentFrameTimeStamp;
 
   /// The raw time stamp as provided by the engine to
-  /// [dart:ui.PlatformDispatcher.onBeginFrame] for the frame currently being
+  /// [package:flutter/ui.dart.PlatformDispatcher.onBeginFrame] for the frame currently being
   /// processed.
   ///
   /// Unlike [currentFrameTimeStamp], this time stamp is neither adjusted to

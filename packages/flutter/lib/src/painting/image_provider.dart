@@ -12,7 +12,7 @@ library;
 import 'dart:async';
 import 'dart:io';
 import 'dart:math' as math;
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -338,7 +338,7 @@ typedef ImageDecoderCallback =
 ///   @override
 ///   Widget build(BuildContext context) {
 ///     return RawImage(
-///       image: _imageInfo?.image, // this is a dart:ui Image object
+///       image: _imageInfo?.image, // this is a package:flutter/ui.dart Image object
 ///       scale: _imageInfo?.scale ?? 1.0,
 ///     );
 ///   }
@@ -1518,7 +1518,7 @@ enum WebHtmlElementStrategy {
 /// The image will be cached regardless of cache headers from the server.
 ///
 /// Typically this class resolves to an image stream that ultimately produces
-/// [dart:ui.Image]s. On the Web platform, the [webHtmlElementStrategy]
+/// [package:flutter/ui.dart.Image]s. On the Web platform, the [webHtmlElementStrategy]
 /// parameter can be used to make the image stream ultimately produce an
 /// [WebImageInfo] instead, which makes [Image.network] display the image as an
 /// HTML element in a platform view. The feature is by default turned off

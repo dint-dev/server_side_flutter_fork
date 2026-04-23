@@ -5,14 +5,14 @@
 /// @docImport 'text_input.dart';
 library;
 
-import 'dart:ui' show TextRange;
+import 'package:flutter/ui.dart' show TextRange;
 
 import 'package:flutter/foundation.dart';
 
 import 'text_editing.dart';
 import 'text_input.dart' show TextEditingValue;
 
-export 'dart:ui' show TextRange;
+export 'package:flutter/ui.dart' show TextRange;
 
 export 'text_editing.dart' show TextSelection;
 export 'text_input.dart' show TextEditingValue;

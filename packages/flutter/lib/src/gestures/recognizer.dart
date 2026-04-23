@@ -23,7 +23,7 @@ import 'events.dart';
 import 'pointer_router.dart';
 import 'team.dart';
 
-export 'dart:ui' show Offset, PointerDeviceKind;
+export 'package:flutter/ui.dart' show Offset, PointerDeviceKind;
 
 export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
 export 'package:vector_math/vector_math_64.dart' show Matrix4;

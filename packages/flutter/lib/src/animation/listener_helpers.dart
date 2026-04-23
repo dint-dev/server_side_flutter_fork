@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 
 import 'animation.dart';
 
-export 'dart:ui' show VoidCallback;
+export 'package:flutter/ui.dart' show VoidCallback;
 
 export 'animation.dart' show AnimationStatus, AnimationStatusListener;
 

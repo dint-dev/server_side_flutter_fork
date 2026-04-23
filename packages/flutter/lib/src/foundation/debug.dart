@@ -9,14 +9,14 @@
 /// @docImport 'package:flutter/widgets.dart';
 library;
 
-import 'dart:ui' as ui show Brightness;
+import 'package:flutter/ui.dart' as ui show Brightness;
 
 import 'assertions.dart';
 import 'memory_allocations.dart';
 import 'platform.dart';
 import 'print.dart';
 
-export 'dart:ui' show Brightness;
+export 'package:flutter/ui.dart' show Brightness;
 
 export 'print.dart' show DebugPrintCallback;
 

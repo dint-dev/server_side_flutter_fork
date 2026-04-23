@@ -47,7 +47,7 @@ import 'transitions.dart';
 import 'value_listenable_builder.dart';
 import 'widget_inspector.dart';
 
-export 'dart:ui' show Locale;
+export 'package:flutter/ui.dart' show Locale;
 
 // Examples can assume:
 // late Widget myWidget;
@@ -625,7 +625,7 @@ class WidgetsApp extends StatefulWidget {
   ///
   /// If this is not provided, the widgets app will create a
   /// [PlatformRouteInformationProvider] with initial route name equal to the
-  /// [dart:ui.PlatformDispatcher.defaultRouteName] by default.
+  /// [package:flutter/ui.dart.PlatformDispatcher.defaultRouteName] by default.
   ///
   /// See also:
   ///
@@ -742,7 +742,7 @@ class WidgetsApp extends StatefulWidget {
   /// {@template flutter.widgets.widgetsApp.initialRoute}
   /// The name of the first route to show, if a [Navigator] is built.
   ///
-  /// Defaults to [dart:ui.PlatformDispatcher.defaultRouteName], which may be
+  /// Defaults to [package:flutter/ui.dart.PlatformDispatcher.defaultRouteName], which may be
   /// overridden by the code that launched the application.
   ///
   /// If the route name starts with a slash, then it is treated as a "deep link",

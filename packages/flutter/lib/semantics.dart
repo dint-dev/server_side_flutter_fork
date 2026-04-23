@@ -13,9 +13,9 @@
 /// and is used by the platform-specific accessibility services.
 ///
 /// @docImport 'src/semantics/semantics.dart';
-library semantics;
+library;
 
-export 'dart:ui' show LocaleStringAttribute, SpellOutStringAttribute;
+export 'package:flutter/ui.dart' show LocaleStringAttribute, SpellOutStringAttribute;
 
 export 'src/semantics/binding.dart';
 export 'src/semantics/debug.dart';

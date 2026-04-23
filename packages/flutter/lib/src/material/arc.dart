@@ -6,7 +6,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui' show lerpDouble;
+import 'package:flutter/ui.dart' show lerpDouble;
 
 import 'package:flutter/animation.dart';
 import 'package:flutter/foundation.dart';

@@ -18,7 +18,7 @@ import 'events.dart';
 import 'recognizer.dart';
 import 'velocity_tracker.dart';
 
-export 'dart:ui' show PointerDeviceKind;
+export 'package:flutter/ui.dart' show PointerDeviceKind;
 
 export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
 

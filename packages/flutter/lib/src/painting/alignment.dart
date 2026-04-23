@@ -6,7 +6,7 @@
 /// @docImport 'package:flutter/material.dart';
 library;
 
-import 'dart:ui' as ui show lerpDouble;
+import 'package:flutter/ui.dart' as ui show lerpDouble;
 
 import 'package:flutter/foundation.dart';
 

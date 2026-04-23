@@ -6,7 +6,7 @@
 library;
 
 import 'dart:math' as math;
-import 'dart:ui' show Color, lerpDouble;
+import 'package:flutter/ui.dart' show Color, lerpDouble;
 
 import 'package:flutter/foundation.dart';
 

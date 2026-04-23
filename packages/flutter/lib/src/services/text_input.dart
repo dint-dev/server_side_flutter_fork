@@ -13,7 +13,7 @@ library;
 
 import 'dart:async';
 import 'dart:io' show Platform;
-import 'dart:ui' show FlutterView, FontWeight, Locale, Offset, Rect, Size, TextAlign, TextDirection;
+import 'package:flutter/ui.dart' show FlutterView, FontWeight, Locale, Offset, Rect, Size, TextAlign, TextDirection;
 
 import 'package:flutter/foundation.dart';
 import 'package:vector_math/vector_math_64.dart' show Matrix4;
@@ -28,7 +28,7 @@ import 'system_channels.dart';
 import 'text_editing.dart';
 import 'text_editing_delta.dart';
 
-export 'dart:ui'
+export 'package:flutter/ui.dart'
     show
         Brightness,
         FontWeight,

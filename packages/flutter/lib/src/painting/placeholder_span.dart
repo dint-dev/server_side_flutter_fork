@@ -5,7 +5,7 @@
 /// @docImport 'package:flutter/material.dart';
 library;
 
-import 'dart:ui' as ui show PlaceholderAlignment;
+import 'package:flutter/ui.dart' as ui show PlaceholderAlignment;
 
 import 'package:flutter/foundation.dart';
 

@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/widgets.dart';
 ///
@@ -11,12 +11,12 @@
 library;
 
 import 'dart:async';
-import 'dart:ui' as ui show Codec, FrameInfo, Image;
+import 'package:flutter/ui.dart' as ui show Codec, FrameInfo, Image;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/scheduler.dart';
 
-/// A [dart:ui.Image] object with its corresponding scale.
+/// A [package:flutter/ui.dart.Image] object with its corresponding scale.
 ///
 /// ImageInfo objects are used by [ImageStream] objects to represent the
 /// actual data of the image once it has been obtained.
@@ -121,7 +121,7 @@ class ImageInfo {
   /// {@template flutter.painting.imageInfo.scale}
   /// For example, if this is 2.0, it means that there are four image pixels for
   /// every one logical pixel, and the image's actual width and height (as given
-  /// by the [dart:ui.Image.width] and [dart:ui.Image.height] properties) are
+  /// by the [package:flutter/ui.dart.Image.width] and [package:flutter/ui.dart.Image.height] properties) are
   /// double the height and width that should be used when painting the image
   /// (e.g. in the arguments given to [Canvas.drawImage]).
   /// {@endtemplate}
@@ -302,7 +302,7 @@ class ImageChunkEvent with Diagnosticable {
 
 /// A handle to an image resource.
 ///
-/// ImageStream represents a handle to a [dart:ui.Image] object and its scale
+/// ImageStream represents a handle to a [package:flutter/ui.dart.Image] object and its scale
 /// (together represented by an [ImageInfo] object). The underlying image object
 /// might change over time, either because the image is animating or because the
 /// underlying image resource was mutated.
@@ -471,7 +471,7 @@ class ImageStreamCompleterHandle {
   }
 }
 
-/// Base class for those that manage the loading of [dart:ui.Image] objects for
+/// Base class for those that manage the loading of [package:flutter/ui.dart.Image] objects for
 /// [ImageStream]s.
 ///
 /// [ImageStreamListener] objects are rarely constructed directly. Generally, an
@@ -878,7 +878,7 @@ abstract class ImageStreamCompleter with Diagnosticable {
   }
 }
 
-/// Manages the loading of [dart:ui.Image] objects for static [ImageStream]s (those
+/// Manages the loading of [package:flutter/ui.dart.Image] objects for static [ImageStream]s (those
 /// with only one frame).
 class OneFrameImageStreamCompleter extends ImageStreamCompleter {
   /// Creates a manager for one-frame [ImageStream]s.

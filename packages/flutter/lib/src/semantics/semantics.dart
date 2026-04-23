@@ -2,16 +2,15 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/material.dart';
 /// @docImport 'package:flutter/rendering.dart';
-/// @docImport 'package:flutter_test/flutter_test.dart';
 library;
 
 import 'dart:core';
 import 'dart:math' as math;
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     show
         CheckedState,
         Locale,
@@ -28,7 +27,7 @@ import 'dart:ui'
         StringAttribute,
         TextDirection,
         Tristate;
-import 'dart:ui' as ui show SemanticsHitTestBehavior;
+import 'package:flutter/ui.dart' as ui show SemanticsHitTestBehavior;
 
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
@@ -39,7 +38,7 @@ import 'package:vector_math/vector_math_64.dart';
 import 'binding.dart' show SemanticsBinding;
 import 'semantics_event.dart';
 
-export 'dart:ui'
+export 'package:flutter/ui.dart'
     show
         Offset,
         Rect,

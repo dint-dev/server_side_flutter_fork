@@ -8,7 +8,7 @@
 /// @docImport 'text_field.dart';
 library;
 
-import 'dart:ui' as ui show BoxHeightStyle, BoxWidthStyle;
+import 'package:flutter/ui.dart' as ui show BoxHeightStyle, BoxWidthStyle;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';

@@ -3,22 +3,21 @@
 // found in the LICENSE file.
 
 /// @docImport 'dart:convert';
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 ///
 /// @docImport 'package:flutter/rendering.dart';
 /// @docImport 'package:flutter/scheduler.dart';
 /// @docImport 'package:flutter/services.dart';
 /// @docImport 'package:flutter/widgets.dart';
-/// @docImport 'package:flutter_test/flutter_test.dart';
 library;
 
 import 'dart:async';
 import 'dart:convert' show json;
 import 'dart:developer' as developer;
 import 'dart:io' show exit;
-import 'dart:ui' as ui show Brightness, PlatformDispatcher, SingletonFlutterWindow, window;
+import 'package:flutter/ui.dart' as ui show Brightness, PlatformDispatcher, SingletonFlutterWindow, window;
 
-// Before adding any more dart:ui imports, please read the README.
+// Before adding any more package:flutter/ui.dart imports, please read the README.
 
 import 'package:meta/meta.dart';
 
@@ -32,7 +31,7 @@ import 'print.dart';
 import 'service_extensions.dart';
 import 'timeline.dart';
 
-export 'dart:ui' show PlatformDispatcher, SingletonFlutterWindow, clampDouble;
+export 'package:flutter/ui.dart' show PlatformDispatcher, SingletonFlutterWindow, clampDouble;
 
 export 'basic_types.dart' show AsyncCallback, AsyncValueGetter, AsyncValueSetter;
 
@@ -51,7 +50,7 @@ typedef ServiceExtensionCallback =
 
 /// Base class for mixins that provide singleton services.
 ///
-/// The Flutter engine ([dart:ui]) exposes some low-level services,
+/// The Flutter engine ([package:flutter/ui.dart]) exposes some low-level services,
 /// but these are typically not suitable for direct use, for example
 /// because they only provide a single callback which an application
 /// may wish to multiplex to allow multiple listeners.
@@ -63,7 +62,7 @@ typedef ServiceExtensionCallback =
 /// ## Implementing a binding mixin
 ///
 /// A library would typically create a new binding mixin to expose a
-/// feature in [dart:ui]. This is rare in general, but it is something
+/// feature in [package:flutter/ui.dart]. This is rare in general, but it is something
 /// that an alternative framework would do, e.g. if a framework were
 /// to replace the [widgets] library with an alternative API but still
 /// wished to leverage the [services] and [foundation] libraries.
@@ -87,7 +86,7 @@ typedef ServiceExtensionCallback =
 /// better. Prefer having APIs that takes objects rather than having
 /// them refer to global singletons. Bindings are best limited to
 /// exposing features that literally only exist once, for example, the
-/// APIs in [dart:ui].
+/// APIs in [package:flutter/ui.dart].
 ///
 /// {@tool snippet}
 ///

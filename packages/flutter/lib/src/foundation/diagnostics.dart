@@ -10,7 +10,7 @@ library;
 
 import 'dart:collection';
 import 'dart:math' as math;
-import 'dart:ui' show clampDouble;
+import 'package:flutter/ui.dart' show clampDouble;
 
 import 'package:meta/meta.dart';
 

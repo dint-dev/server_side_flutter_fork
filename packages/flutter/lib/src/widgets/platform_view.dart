@@ -429,7 +429,7 @@ typedef ElementCreatedCallback = void Function(Object element);
 /// ### Using the `PlatformViewRegistry`
 ///
 /// The primitives used to implement [HtmlElementView.fromTagName] are available
-/// for general use through `dart:ui_web`'s `platformViewRegistry`.
+/// for general use through `package:flutter/ui.dart_web`'s `platformViewRegistry`.
 ///
 /// Creating an `HtmlElementView` through these primitives is a two step process:
 ///
@@ -440,7 +440,7 @@ typedef ElementCreatedCallback = void Function(Object element);
 /// be attached later:
 ///
 /// ```dart
-/// import 'dart:ui_web' as ui_web;
+/// import 'package:flutter/ui.dart_web' as ui_web;
 /// import 'package:web/web.dart' as web;
 ///
 /// void registerRedDivFactory() {
@@ -585,7 +585,7 @@ typedef ElementCreatedCallback = void Function(Object element);
 ///
 /// ```dart
 /// import 'dart:js_interop';
-/// import 'dart:ui_web' as ui_web;
+/// import 'package:flutter/ui.dart_web' as ui_web;
 /// import 'package:flutter/widgets.dart';
 ///
 /// void useHostElement(BuildContext context) {

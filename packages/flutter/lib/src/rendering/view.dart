@@ -4,11 +4,10 @@
 
 /// @docImport 'package:flutter/semantics.dart';
 /// @docImport 'package:flutter/widgets.dart';
-/// @docImport 'package:flutter_test/flutter_test.dart';
 library;
 
 import 'dart:io' show Platform;
-import 'dart:ui' as ui show FlutterView, Scene, SceneBuilder, SemanticsUpdate;
+import 'package:flutter/ui.dart' as ui show FlutterView, Scene, SceneBuilder, SemanticsUpdate;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';

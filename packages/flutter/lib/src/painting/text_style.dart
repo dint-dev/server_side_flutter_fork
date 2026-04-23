@@ -6,7 +6,7 @@
 library;
 
 import 'dart:collection';
-import 'dart:ui'
+import 'package:flutter/ui.dart'
     as ui
     show ParagraphStyle, Shadow, StrutStyle, TextStyle, kTextHeightNone, lerpDouble;
 
@@ -459,7 +459,7 @@ const String _kColorBackgroundWarning =
 ///  * [RichText], the widget for showing a paragraph of mix-style text.
 ///  * [TextSpan], the class that wraps a [TextStyle] for the purposes of
 ///    passing it to a [RichText].
-///  * [TextStyle](https://api.flutter.dev/flutter/dart-ui/TextStyle-class.html), the class in the [dart:ui] library.
+///  * [TextStyle](https://api.flutter.dev/flutter/dart-ui/TextStyle-class.html), the class in the [package:flutter/ui.dart] library.
 ///  * Cookbook: [Use a custom font](https://docs.flutter.dev/cookbook/design/fonts)
 ///  * Cookbook: [Use themes to share colors and font styles](https://docs.flutter.dev/cookbook/design/themes)
 @immutable
@@ -1329,7 +1329,7 @@ class TextStyle with Diagnosticable {
     );
   }
 
-  /// The style information for text runs, encoded for use by `dart:ui`.
+  /// The style information for text runs, encoded for use by `package:flutter/ui.dart`.
   ui.TextStyle getTextStyle({
     @Deprecated(
       'Use textScaler instead. '
@@ -1377,7 +1377,7 @@ class TextStyle with Diagnosticable {
     );
   }
 
-  /// The style information for paragraphs, encoded for use by `dart:ui`.
+  /// The style information for paragraphs, encoded for use by `package:flutter/ui.dart`.
   ///
   /// If the `textScaleFactor` argument is omitted, it defaults to one. The
   /// other arguments may be null. The `maxLines` argument, if specified and

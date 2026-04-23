@@ -2,14 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-/// @docImport 'dart:ui';
+/// @docImport 'package:flutter/ui.dart';
 library;
 
-import 'dart:ui' as ui show PointerChange, PointerData, PointerSignalKind;
+import 'package:flutter/ui.dart' as ui show PointerChange, PointerData, PointerSignalKind;
 
 import 'events.dart';
 
-export 'dart:ui' show PointerData;
+export 'package:flutter/ui.dart' show PointerData;
 
 export 'events.dart' show PointerEvent;
 
@@ -49,7 +49,7 @@ typedef DevicePixelRatioGetter = double? Function(int viewId);
 /// Converts from engine pointer data to framework pointer events.
 ///
 /// This takes [PointerDataPacket] objects, as received from the engine via
-/// [dart:ui.PlatformDispatcher.onPointerDataPacket], and converts them to
+/// [package:flutter/ui.dart.PlatformDispatcher.onPointerDataPacket], and converts them to
 /// [PointerEvent] objects.
 abstract final class PointerEventConverter {
   /// Expand the given packet of pointer data into a sequence of framework

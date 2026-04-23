@@ -8,7 +8,7 @@ import 'events.dart';
 import 'gesture_details.dart';
 import 'recognizer.dart';
 
-export 'dart:ui' show Offset, PointerDeviceKind;
+export 'package:flutter/ui.dart' show Offset, PointerDeviceKind;
 
 export 'events.dart' show PointerDownEvent, PointerEvent;
 

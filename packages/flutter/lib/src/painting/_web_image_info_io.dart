@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'image_stream.dart';
 
 /// An [ImageInfo] object indicating that the image can only be displayed in
-/// an HTML element, and no [dart:ui.Image] can be created for it.
+/// an HTML element, and no [package:flutter/ui.dart.Image] can be created for it.
 ///
 /// This occurs on the web when the image resource is from a different origin
 /// and is not configured for CORS. Since the image bytes cannot be directly

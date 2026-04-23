@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'assertions.dart';
 import 'constants.dart';
@@ -18,7 +18,7 @@ const bool _kMemoryAllocations = bool.fromEnvironment('flutter.memory_allocation
 /// `--dart-define=flutter.memory_allocations=true`.
 const bool kFlutterMemoryAllocationsEnabled = _kMemoryAllocations || kDebugMode;
 
-const String _dartUiLibrary = 'dart:ui';
+const String _dartUiLibrary = 'package:flutter/ui.dart';
 
 class _FieldNames {
   static const String eventType = 'eventType';

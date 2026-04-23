@@ -9,7 +9,7 @@ library;
 
 import 'dart:collection';
 import 'dart:math' as math;
-import 'dart:ui' as ui show Gradient, lerpDouble;
+import 'package:flutter/ui.dart' as ui show Gradient, lerpDouble;
 
 import 'package:flutter/foundation.dart';
 import 'package:vector_math/vector_math_64.dart';
@@ -151,7 +151,7 @@ class GradientRotation extends GradientTransform {
 ///
 /// See also:
 ///
-///  * [Gradient](dart-ui/Gradient-class.html), the class in the [dart:ui] library.
+///  * [Gradient](dart-ui/Gradient-class.html), the class in the [package:flutter/ui.dart] library.
 ///
 @immutable
 abstract class Gradient {
@@ -338,7 +338,7 @@ abstract class Gradient {
 ///
 /// This class is used by [BoxDecoration] to represent linear gradients. This
 /// abstracts out the arguments to the [ui.Gradient.linear] constructor from
-/// the `dart:ui` library.
+/// the `package:flutter/ui.dart` library.
 ///
 /// A gradient has two anchor points, [begin] and [end]. The [begin] point
 /// corresponds to 0.0, and the [end] point corresponds to 1.0. These points are
@@ -576,7 +576,7 @@ class LinearGradient extends Gradient {
 ///
 /// This class is used by [BoxDecoration] to represent radial gradients. This
 /// abstracts out the arguments to the [ui.Gradient.radial] constructor from
-/// the `dart:ui` library.
+/// the `package:flutter/ui.dart` library.
 ///
 /// A normal radial gradient has a [center] and a [radius]. The [center] point
 /// corresponds to 0.0, and the ring at [radius] from the center corresponds
@@ -880,7 +880,7 @@ class RadialGradient extends Gradient {
 ///
 /// This class is used by [BoxDecoration] to represent sweep gradients. This
 /// abstracts out the arguments to the [ui.Gradient.sweep] constructor from
-/// the `dart:ui` library.
+/// the `package:flutter/ui.dart` library.
 ///
 /// A gradient has a [center], a [startAngle], and an [endAngle]. The [startAngle]
 /// corresponds to 0.0, and the [endAngle] corresponds to 1.0. These angles are

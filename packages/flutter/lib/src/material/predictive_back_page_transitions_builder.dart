@@ -7,7 +7,7 @@
 /// @docImport 'page.dart';
 library;
 
-import 'dart:ui' show clampDouble;
+import 'package:flutter/ui.dart' show clampDouble;
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';

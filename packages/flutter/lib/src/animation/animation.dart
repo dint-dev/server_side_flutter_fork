@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 
 import 'tween.dart';
 
-export 'dart:ui' show VoidCallback;
+export 'package:flutter/ui.dart' show VoidCallback;
 
 export 'tween.dart' show Animatable;
 

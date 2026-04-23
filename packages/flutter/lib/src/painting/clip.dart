@@ -5,7 +5,7 @@
 /// @docImport 'package:flutter/rendering.dart';
 library;
 
-import 'dart:ui' show Canvas, Clip, Paint, Path, RRect, RSuperellipse, Rect, VoidCallback;
+import 'package:flutter/ui.dart' show Canvas, Clip, Paint, Path, RRect, RSuperellipse, Rect, VoidCallback;
 
 /// Clip utilities used by [PaintingContext].
 abstract class ClipContext {

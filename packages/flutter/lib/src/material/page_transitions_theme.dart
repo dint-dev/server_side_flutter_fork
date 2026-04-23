@@ -8,7 +8,7 @@
 /// @docImport 'predictive_back_page_transitions_builder.dart';
 library;
 
-import 'dart:ui' as ui;
+import 'package:flutter/ui.dart' as ui;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
