@@ -1,6 +1,6 @@
 ## What is this?
-  * Allows having Flutter dependencies without Flutter SDK.
-  * This is useful in some server-side deployments.
+  * Enables you to use "package:flutter" without Flutter SDK.
+  * This is useful in server-side code that uses only Dart SDK.
 
 ## Usage
 In your `pubspec.yaml`:
